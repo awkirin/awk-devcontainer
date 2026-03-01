@@ -9,7 +9,8 @@
     }
   },
   "mounts": [
-    "source=${env:USERPROFILE}${env:HOME}/.config/sops/age/keys.txt,target=/.jbdevcontainer/config/sops/age/keys.txt,type=bind,consistency=cached"
+    "source=${env:USERPROFILE}${env:HOME}/.config/sops/age/keys.txt,target=/.jbdevcontainer/config/sops/age/keys.txt,type=bind,consistency=cached",
+    "source=${env:USERPROFILE}${env:HOME}/.ssh/config,target=/etc/ssh/ssh_config.d/default.conf,type=bind,consistency=cached"
   ],
   features: {
     "ghcr.io/devcontainers/features/common-utils:2": {
